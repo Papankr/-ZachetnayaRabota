@@ -1,0 +1,70 @@
+<html lang="en">\
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jumbotron Template for Bootstrap</title>
+
+  </head>
+
+  <body>
+    <main role="main">
+
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3"><%= t(:'Добро пожаловать на фотопроект Твоё!')%></h1>
+          <p><%= t(:'На нашем сайте вы найдете сборник фотографий')%></p>
+          <div class="row" align="center">
+              <%= link_to (t(:'Перейти к каталогу')),indeximage_path,:class=> 'btn btn-primary btn-lg' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" >
+        <div class="col-md-4" align="center">
+          <h2 > <%= t(:'Популярные фотографии')%></h2>
+        </div>
+      </div>
+
+      <div class="album text-muted">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-3 col-md-4 col-6 thumb">
+                <%= image_tag '3.jpeg', :data_src=> 'holder.js/100px280?theme=thumb',
+                              :alt=> 'Thumbnail [100%x280]',
+                              :style=>'height: 280px; width: 100%; display: block;'%>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 thumb">
+                <%= image_tag '2.jpeg', :data_src=> 'holder.js/100px280?theme=thumb',
+                              :alt=> 'Thumbnail [100%x280]',
+                              :style=>'height: 280px; width: 100%; display: block;'%>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 thumb">
+                <%= image_tag '1.png', :data_src=> 'holder.js/100px280?theme=thumb',
+                              :alt=> 'Thumbnail [100%x280]',
+                              :style=>'height: 280px; width: 100%; display: block;'%>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 thumb">
+                <%= image_tag '0.jpeg', :data_src=> 'holder.js/100px280?theme=thumb',
+                              :alt=> 'Thumbnail [100%x280]',
+                              :style=>'height: 280px; width: 100%; display: block;'%>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="container">
+      <p>©192/164 Company 2017</p>
+    </footer>
+
+  </body>
+</html>

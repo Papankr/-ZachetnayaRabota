@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Final</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <!-- <link href="album.css" rel="stylesheet">-->
+    <!-- fancyBox3 CSS -->
+    <!-- <link href="/app/assets/stylesheets/jquery.fancybox.min.css" rel="stylesheet">-->
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <%=link_to t(:'Твоё'),root_path,:class=> 'navbar-brand' %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+              aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="navbar-nav mr-auto">
+      </ul>
+      <% if user_signed_in? %>
+          <p class="text-success" style="padding-right: 10px"> <%= t(:'Здравствуйте,')%> <%= current_user.email%> </p>
+          <%= link_to t(:'Выйти'), destroy_user_session_path,:method => :delete,
+                      :class=> 'btn btn-success'  %>
+      <% else %>
+          <div style="padding-right: 10px">  <%= link_to t(:'Войти') ,new_user_session_path,:class=> 'btn btn-success'%></div>
+          <%= link_to t(:'Зарегистрироваться'), new_user_registration_path,:class=> 'btn btn-success'%>
+      <% end %>
+      <li class="nav-item<%=' active' if  I18n.locale == :ru %>">
+        <%= link_to 'Рус', {locale: :ru}%>
+    </li>
+    <li class="nav-item'<%=' active' if  I18n.locale == :en %>">
+        <%= link_to 'Eng', {locale: :en}%>
+      </li>
+    </nav>
+  </head>
+  <body>
+
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Signin Template for Bootstrap</title>
+
+</head>
+  <body>
+    <div class="container">
+      <h2 class="form-signin-heading"><%= t(:'Добавить фото')%></h2>
+      <%= form_for @image,html:{multipart:true} do |f| %>
+
+          <div class="field">
+            <%= f.label t(:'Название_фото'),:class=>'sr-only'%><br/>
+            <%= f.text_field :title,:class=> 'form-control',:placeholder=> t(:'Название фото') %><br/>
+          </div>
+
+          <div class="field">
+            <%= f.label t(:'Выберите_фото'),:class=>'sr-only'%><br/>
+            <%= f.file_field :image,:class=> 'form-control' %><br/>
+          </div>
+
+          <div class="field">
+            <%= f.label t(:'Автор'),:class=>'sr-only'%><br/>
+            <%= f.text_field :autor ,:value=>current_user.email,:class=> 'form-control'%> </br>
+          </div>
+
+          <div class="actions">
+            <%= f.submit t(:'Добавить'), :class=> 'btn btn-lg btn-primary' %>
+          </div>
+
+        <% end %>
+
+      <%= link_to t(:'Назад'), indeximage_path  %>
+    </div>
+
+  </body>
+</html>

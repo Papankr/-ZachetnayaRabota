@@ -1,0 +1,66 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+    Фотографии: 'Photo'
+    Домой: 'Home'
+    О проекте: 'About'
+    Контакты: 'Contacts'
+    Мы ВКонтакте: 'We VK'
+    Загрузить фото: 'Upload photos'
+    Удалить: 'Delete'
+    Твоё: 'Your'
+    Здравствуйте,: 'Hello,'
+    Выйти: 'Out'
+    Войти: 'Sign In'
+    Зарегистрироваться: 'Sign Up'
+    Добро пожаловать на фотопроект Твоё!: 'Welcome to the photo project  Yours!'
+    На нашем сайте вы найдете сборник фотографий: 'On our site you will find a collection of photographs'
+    Перейти к каталогу: 'Go to the catalog'
+    Популярные фотографии: 'Popular Photos'
+    Подробнее»: 'Learn More»'
+    Название фото: 'Name of photo'
+    Выберите фото: 'Select a photo'
+    Автор: 'Author'
+    Добавить: 'Add'
+    Назад: 'Back'
+    Регистрация: 'Sign Up'
+    Пароль: 'Password'
+    Повторите пароль: 'Confirm password'
+    Авторизация: 'Authorization'
+    Уже есть аккаунт? Вход: 'Already have an account? entrance'
+    Нет аккаунта? Регистрация: 'No account? check in'
+    Для добавления альбома нужно авторизироваться: 'To add an album you need to log in'
+    Хочешь добавить свое фото?: 'Do you want to add your photo?'
+
+
+
+
